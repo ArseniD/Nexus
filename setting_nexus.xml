@@ -7,14 +7,15 @@
       <usePluginRegistry/>
       <offline/>
       <pluginGroups/>
-      <servers>
-      	<server>
-        	<id>releases</id>
-       		<username>test</username>
-       		<password>test123</password>
-       	</server>
-      </servers>
-      <mirrors/>
+      <servers/>
+      <mirrors>
+    	<mirror>
+      		<id>test</id>
+      		<name>test proxy repo</name>
+      		<url>http://jenkins/repository/test/</url>
+      		<mirrorOf>*</mirrorOf>
+    	</mirror>
+      </mirrors>
       <proxies/>
       <profiles/>
       <activeProfiles/>
