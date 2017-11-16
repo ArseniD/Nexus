@@ -12,7 +12,7 @@
     	<mirror>
       		<id>test</id>
       		<name>test proxy repo</name>
-      		<url>http://nexus/repository/test/</url>
+      		<url>http://nexus/repository/test-group/</url>
       		<mirrorOf>*</mirrorOf>
     	</mirror>
       </mirrors>
