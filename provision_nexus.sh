@@ -101,7 +101,7 @@ yum -y install nginx > /dev/null 2>&1
 ########################
 echo "Configuring nginx"
 sed -e 's/80/8088/' -i /etc/nginx/nginx.conf
-cat > /etc/nginx/conf.d/sonar.conf <<\EOF
+cat > /etc/nginx/conf.d/nexus.conf <<\EOF
 client_max_body_size 100M;
 
 upstream app_server {
