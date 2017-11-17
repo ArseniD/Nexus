@@ -1,22 +1,49 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
                           https://maven.apache.org/xsd/settings-1.0.0.xsd">
-      <localRepository/>
-      <interactiveMode/>
-      <usePluginRegistry/>
-      <offline/>
-      <pluginGroups/>
-      <servers/>
-      <mirrors>
-    	<mirror>
-      		<id>test</id>
-      		<name>test proxy repo</name>
-      		<url>http://nexus/repository/test-group/</url>
-      		<mirrorOf>*</mirrorOf>
-    	</mirror>
-      </mirrors>
-      <proxies/>
-      <profiles/>
-      <activeProfiles/>
-    </settings>
+  <localRepository/>
+  <interactiveMode/>
+  <usePluginRegistry/>
+  <offline/>
+  <pluginGroups/>
+  <servers/>
+  <proxies/>
+
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>nexus-repo</id>
+          <name>Nexus repo</name>
+          <url>http://nexus/repository/test-group</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>nexus-repo</id>
+          <name>Nexus repo
+          </name>
+          <url>http://nexus/repository/test-group</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+
+</settings>
